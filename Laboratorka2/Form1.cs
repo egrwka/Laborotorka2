@@ -304,8 +304,12 @@ namespace Laboratorka2
 
         private void ToolStripButton2_Click(object sender, EventArgs e)
         {
+
+            History.Clear();
+            historyCounter = 0;
             Bitmap pic = new Bitmap(820, 509);
             pictureBox1.Image = pic;
+            History.Add(new Bitmap(pictureBox1.Image));
 
             if (pictureBox1.Image == null)
             {
