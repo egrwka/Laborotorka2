@@ -57,6 +57,7 @@
             this.colorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.figureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.boxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.circleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -329,7 +330,8 @@
             // 
             this.figureToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.figureToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.boxToolStripMenuItem});
+            this.boxToolStripMenuItem,
+            this.circleToolStripMenuItem});
             this.figureToolStripMenuItem.ForeColor = System.Drawing.Color.Magenta;
             this.figureToolStripMenuItem.Name = "figureToolStripMenuItem";
             this.figureToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
@@ -339,9 +341,16 @@
             // boxToolStripMenuItem
             // 
             this.boxToolStripMenuItem.Name = "boxToolStripMenuItem";
-            this.boxToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
+            this.boxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.boxToolStripMenuItem.Text = "Box";
             this.boxToolStripMenuItem.Click += new System.EventHandler(this.BoxToolStripMenuItem_Click);
+            // 
+            // circleToolStripMenuItem
+            // 
+            this.circleToolStripMenuItem.Name = "circleToolStripMenuItem";
+            this.circleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.circleToolStripMenuItem.Text = "Circle";
+            this.circleToolStripMenuItem.Click += new System.EventHandler(this.CircleToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -560,6 +569,7 @@
         private System.Windows.Forms.ToolStripMenuItem figureToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem boxToolStripMenuItem;
         private System.Windows.Forms.TrackBar trackBar2;
+        private System.Windows.Forms.ToolStripMenuItem circleToolStripMenuItem;
     }
 }
 
