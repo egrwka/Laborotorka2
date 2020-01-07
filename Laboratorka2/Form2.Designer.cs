@@ -201,6 +201,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(131, 100);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // Form2
             // 

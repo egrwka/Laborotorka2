@@ -117,5 +117,10 @@ namespace Laboratorka2
         {
             Close();
         }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

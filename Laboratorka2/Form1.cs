@@ -264,6 +264,34 @@ namespace Laboratorka2
                 g.Dispose();
                 pictureBox1.Invalidate();
             }
+            else if (Figur1 == 2)
+            {
+                Graphics g = Graphics.FromImage(pictureBox1.Image);
+                currentPath.AddEllipse(localX, localY, localXD, localYD);
+                g.DrawPath(currentPen, currentPath);
+                oldLocation = e.Location;
+                g.Dispose();
+                pictureBox1.Invalidate();
+            }
+
+            else if (Figur1 == 3)
+            {
+                Graphics g = Graphics.FromImage(pictureBox1.Image);
+                Point[] pnt = new Point[3];
+
+                pnt[0].X = localX;
+                pnt[0].Y = localY;
+
+                pnt[1].X = localX - localXD;
+                pnt[1].Y = localY + localYD;
+
+                pnt[2].X = localX + localXD;
+                pnt[2].Y = localY + localYD;
+
+                g.DrawPolygon(currentPen, pnt);
+                g.Dispose();
+                pictureBox1.Invalidate();
+            }
 
             History.RemoveRange(historyCounter + 1, History.Count - historyCounter - 1);
             History.Add(new Bitmap(pictureBox1.Image));
@@ -291,6 +319,15 @@ namespace Laboratorka2
                     g.Dispose();
                     pictureBox1.Invalidate();
                 }
+                //else if (Figur1 == 1)
+                //{
+                //    Graphics g = Graphics.FromImage(pictureBox1.Image);
+                //    currentPath.AddEllipse(localX, localY, localXD, localYD);
+                //    g.DrawPath(currentPen, currentPath);
+                //    oldLocation = e.Location;
+                //    g.Dispose();
+                //    pictureBox1.Invalidate();
+                //}
                 else
                 {
                     localX = oldLocation.X;
@@ -433,7 +470,15 @@ namespace Laboratorka2
             return bmp;
         }
 
+        private void CircleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Figur1 = 2;
+        }
 
+        private void PolygonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Figur1 = 3;
+        }
     }
 }
 

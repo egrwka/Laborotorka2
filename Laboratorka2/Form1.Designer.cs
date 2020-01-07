@@ -57,6 +57,7 @@
             this.colorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.figureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.boxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.circleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -68,6 +69,7 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip5 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.polygonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
@@ -329,7 +331,9 @@
             // 
             this.figureToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.figureToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.boxToolStripMenuItem});
+            this.boxToolStripMenuItem,
+            this.circleToolStripMenuItem,
+            this.polygonToolStripMenuItem});
             this.figureToolStripMenuItem.ForeColor = System.Drawing.Color.Magenta;
             this.figureToolStripMenuItem.Name = "figureToolStripMenuItem";
             this.figureToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
@@ -339,9 +343,16 @@
             // boxToolStripMenuItem
             // 
             this.boxToolStripMenuItem.Name = "boxToolStripMenuItem";
-            this.boxToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
+            this.boxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.boxToolStripMenuItem.Text = "Box";
             this.boxToolStripMenuItem.Click += new System.EventHandler(this.BoxToolStripMenuItem_Click);
+            // 
+            // circleToolStripMenuItem
+            // 
+            this.circleToolStripMenuItem.Name = "circleToolStripMenuItem";
+            this.circleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.circleToolStripMenuItem.Text = "Circle";
+            this.circleToolStripMenuItem.Click += new System.EventHandler(this.CircleToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -481,6 +492,13 @@
             this.toolStripButton5.Size = new System.Drawing.Size(104, 104);
             this.toolStripButton5.Text = "toolStripButton5";
             // 
+            // polygonToolStripMenuItem
+            // 
+            this.polygonToolStripMenuItem.Name = "polygonToolStripMenuItem";
+            this.polygonToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.polygonToolStripMenuItem.Text = "Polygon";
+            this.polygonToolStripMenuItem.Click += new System.EventHandler(this.PolygonToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -560,6 +578,8 @@
         private System.Windows.Forms.ToolStripMenuItem figureToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem boxToolStripMenuItem;
         private System.Windows.Forms.TrackBar trackBar2;
+        private System.Windows.Forms.ToolStripMenuItem circleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem polygonToolStripMenuItem;
     }
 }
 
